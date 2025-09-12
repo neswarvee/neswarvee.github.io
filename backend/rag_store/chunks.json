@@ -1,0 +1,62 @@
+[
+  {
+    "src": "index.html",
+    "content": "Nirmal Eswar Vee - Software & AI Engineer Software & AI Engineer Specialising in Healthcare Analytics & Machine Learning Get in Touch View Projects About Me Currently pursuing a BSc in Computer Science with Artificial Intelligence at the University of Sheffield, while working part-time as a Software and Data Engineer at Clatterbridge Cancer Trust. I specialise in healthcare analytics, machine learning, and software development. Languages Python, Java, C#, JavaScript Technologies Power BI, PowerApps, PyTorch, SQL Focus Areas Machine Learning, Healthcare Analytics, Data Science Experience Software and Data Engineer Clatterbridge Cancer Trust | Dec 2024 - Present Developed interactive Power BI dashboards for patient acuity monitoring Built PowerApps portal for streamlining consultant workflow"
+  },
+  {
+    "src": "index.html",
+    "content": "s Contributed to ML model development for predicting patient attendance Software Engineering Intern Aassaan eduCare, Chennai | September 2024 Gained hands-on experience in educational technology at a leading accreditation-focused startup Shadowed senior engineers developing innovative solutions for university accreditation processes Gained valuable insights into startup culture and global software engineering practices Software Developer Intern Clatterbridge Cancer Centre | August - September 2024 Developed a centralised PowerApps portal for consultant doctors to streamline application access Presented technical solutions at change advisory board meetings to senior stakeholders Collaborated on predictive modeling for patient attendance using machine learning techniques AI and Law Conferenc"
+  },
+  {
+    "src": "index.html",
+    "content": "e Attendee University of Cape Town | June 2024 Participated in a three-day conference exploring the intersection of AI and law with international legal professionals Featured Projects RNN Memory Research (Dissertation) Conducted novel research on sequence memorisation in RNNs, achieving perfect reconstruction up to length 40 through optimised architectures. Investigated the practical limits of memory capacity in standard RNNs without complex gating mechanisms. PyTorch Deep Learning Research NHS PowerApps Application Developed an intuitive PowerApps portal for consultants at Clatterbridge Cancer Trust, enabling centralised access management and improved workflow efficiency. PowerApps Healthcare IBM AI Group Project: Paradroid Game Led AI implementation in an educational game teaching AI con"
+  },
+  {
+    "src": "index.html",
+    "content": "cepts through interactive gameplay. Collaborated with a team to develop engaging learning experiences. Unity C# AI Education View on GitHub Trains of Sheffield E-Commerce Built a full-featured e-commerce platform for model railway products with secure payment processing and order management capabilities. Java SQL E-Commerce View on GitHub Global Engineering Challenge Led a team project developing renewable energy solutions for Malta's energy crisis, focusing on sustainable and practical implementations. Sustainability Team Leadership Naive POS Tagger Implemented a part-of-speech tagger using frequency-based analysis and heuristic approaches for unknown word handling. Evaluated against gold-standard datasets. Python NLP View on GitHub Portfolio Website Designed and developed a responsive po"
+  },
+  {
+    "src": "index.html",
+    "content": "rtfolio website using modern web technologies and best practices for showcasing projects and skills. HTML CSS JavaScript View on GitHub Healthcare Analytics Dashboards Developed comprehensive business intelligence operational reports at Clatterbridge Cancer Trust using patient data. Created automated data pipelines that transform raw healthcare data into actionable insights through interactive dashboards. Implemented secure data handling practices and automated refresh schedules. Automated data refresh pipelines using Power Automate and SQL stored procedures Created interactive dashboards for patient acuity monitoring Designed user-friendly interfaces for clinical staff Power BI SQL Power Automate DAX Healthcare Analytics Certifications & Training Microsoft Power Platform Currently pursuin"
+  },
+  {
+    "src": "index.html",
+    "content": "g PL-300 certification IBM Professional Certifications Enterprise AI, Data Science, Cloud Computing Get in Touch N Chat with NirmalBot \u00d7 Send"
+  },
+  {
+    "src": "postag.html",
+    "content": "Naive POS Tagger Project Project Overview This project implements a naive part-of-speech (POS) tagger using Python, which assigns POS tags to words based on training data frequencies. The tagger also uses heuristics to handle unknown words, improving accuracy when evaluated on a test dataset. Project Details Objective: To build a simple POS tagger and evaluate its accuracy by comparing tagged words against a gold-standard test dataset. Training Data: Processes training data to build a lexicon that maps each word to its most frequent POS tag. Tagging Approach: Uses the most common tag per word for known words and assigns the overall most common tag to unknown words. Heuristics for Unknown Words: Tags numbers as CD (cardinal numbers). Tags capitalized words as NNP (proper nouns). Uses suffix"
+  },
+  {
+    "src": "postag.html",
+    "content": " cues (e.g., -ing , -ly ) to assign likely POS tags for words ending in specific patterns. Evaluation: Calculates accuracy by comparing predicted POS tags with the actual tags in the test data, providing insight into the tagger's effectiveness."
+  },
+  {
+    "src": "gec.html",
+    "content": "Global Engineering Challenge Project Overview Worked in a team to develop a solution for solving the energy crisis in Malta with renewable energy sources. Project Details Conducted project risk assessments, ensuring a strategic approach to development. Delivered a successful final pitch to communicate the project\u2019s value and impact."
+  },
+  {
+    "src": "dissertation.html",
+    "content": "Dissertation Project Dissertation Project Investigating memorization in recurrent neural networks (RNNs) to demonstrate that memorization is not capped due to numerical instability. Project Details Investigating memorization in recurrent neural networks (RNNs) to demonstrate that memorization is not capped due to numerical instability. Developing a proof of concept that regenerates historical states using matrix inversion and invertible non-linearity. Exploring methods to maintain stability while increasing sequence length and efficiently compressing information into limited states. Putting the theory into simulation using Python to prove my hypotheses. View on GitHub"
+  },
+  {
+    "src": "game.html",
+    "content": "IBM AI Group Project: Paradroid Game Project Overview Collaborated effectively with a dynamic team to develop a tool for IBM that taught their users about AI. Project Details Developed a retro-style action game inspired by the original Paradroid, incorporating custom artwork and music. Created a comprehensive requirements document using the MoSCoW prioritization technique, outlining must-have, should-have, could-have, and won't-have features agreed upon with the client. Designed and implemented game mechanics including: Quiz System: Players answer questions related to IBM Skills Build topics (AI, Data Science, Threat Hunting) to take control of enemies. Shooting Mechanic: Introduced flexible shooting angles for enhanced gameplay. Enemy Behavior: Implemented patrol and chase mechanics with "
+  },
+  {
+    "src": "game.html",
+    "content": "dynamic voice lines. Teleportation: Developed a teleport system between game floors with user-friendly animations and prompts. Integrated accessibility features to ensure inclusivity for players with color blindness, along with a clear user manual. Created a save/load system allowing players to maintain their progress. Conducted extensive testing with beta testers, receiving positive feedback on gameplay and performance."
+  },
+  {
+    "src": "trains.html",
+    "content": "Trains of Sheffield Online Store Project Overview Developed an online store for Trains of Sheffield, allowing customers to browse model railway products, create orders, and manage banking details. Project Details Designed a user-friendly interface that enables customers to easily navigate product categories, view details, and add items to their order. Implemented a robust authentication system for customer and staff registration, ensuring secure login and personal information management. Created a staff area for inventory management, allowing staff to add, edit, and delete products while updating stock levels automatically. Integrated an order management system that tracks order status (pending, confirmed, fulfilled) and allows customers to confirm their orders with banking details. Establ"
+  },
+  {
+    "src": "trains.html",
+    "content": "ished a manager role with exclusive permissions to promote or demote staff members, ensuring a secure user role hierarchy."
+  },
+  {
+    "src": "nhs-powerapps.html",
+    "content": "NHS PowerApps Application Project Overview Developed an intuitive PowerApps application for consultants at the Clatterbridge Cancer Trust, allowing them to manage their apps more effectively. The application provides a streamlined and user-friendly interface to enhance their workflow. Prev Next Key Features Apps gallery with icons, names, and descriptions. Favourite, request access, and run action buttons. Search bar for quick app access. Personalized request access functionality with confirmation pop-ups. Technologies Used Microsoft PowerApps Power Automate Unfortunately, I can't link to the github page for this project as it's now intellectual property of the hospital"
+  }
+]

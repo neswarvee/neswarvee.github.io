@@ -157,3 +157,55 @@ document.addEventListener('DOMContentLoaded', () => {
     const sliders = document.querySelectorAll('.slider');
     sliders.forEach(slider => new Slider(slider));
 });
+// Chatbot UI logic
+document.addEventListener("DOMContentLoaded", () => {
+  const container = document.getElementById("chatbot-container");
+  const toggle = document.getElementById("chatbot-toggle");
+  const close = document.getElementById("chatbot-close");
+  const messages = document.getElementById("chatbot-messages");
+  const input = document.getElementById("chatbot-input");
+  const send = document.getElementById("chatbot-send");
+
+  function addMessage(role, text) {
+    const bubble = document.createElement("div");
+    bubble.className = role === "user"
+      ? "bg-blue-600 text-white p-2 rounded-lg max-w-[80%] ml-auto"
+      : "bg-gray-200 text-gray-800 p-2 rounded-lg max-w-[80%]";
+    bubble.textContent = text;
+    messages.appendChild(bubble);
+    messages.scrollTop = messages.scrollHeight;
+  }
+
+  async function sendMessage() {
+    const text = input.value.trim();
+    if (!text) return;
+    addMessage("user", text);
+    input.value = "";
+
+    // Call your backend (FastAPI or similar)
+    try {
+      const res = await fetch("http://localhost:8000/chat", {
+        method: "POST",
+        headers: {"Content-Type": "application/json"},
+        body: JSON.stringify({message: text, history: []})
+      });
+      const data = await res.json();
+      addMessage("bot", data.reply || "Sorry, I couldn’t fetch an answer.");
+    } catch (e) {
+      addMessage("bot", "⚠️ Error contacting server.");
+    }
+  }
+
+  toggle.addEventListener("click", () => {
+    container.classList.toggle("hidden");
+  });
+
+  close.addEventListener("click", () => {
+    container.classList.add("hidden");
+  });
+
+  send.addEventListener("click", sendMessage);
+  input.addEventListener("keydown", e => {
+    if (e.key === "Enter") sendMessage();
+  });
+});
