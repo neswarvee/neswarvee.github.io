@@ -13,19 +13,34 @@
 <body class="bg-gray-100">
     <!-- Navigation -->
     <nav class="fixed w-full bg-white shadow-lg z-50">
-        <div class="container mx-auto px-6 py-3">
-            <div class="flex justify-between items-center">
-                <div class="text-xl font-bold text-gray-800">Nirmal Eswar Vee</div>
-                <div class="hidden md:flex space-x-8">
-                    <a href="#home" class="text-gray-600 hover:text-blue-600">Home</a>
-                    <a href="#about" class="text-gray-600 hover:text-blue-600">About</a>
-                    <a href="#experience" class="text-gray-600 hover:text-blue-600">Experience</a>
-                    <a href="#projects" class="text-gray-600 hover:text-blue-600">Projects</a>
-                    <a href="#certifications" class="text-gray-600 hover:text-blue-600">Certifications</a>
-                </div>
-            </div>
+    <div class="container mx-auto px-6 py-3 flex justify-between items-center">
+        <div class="text-xl font-bold text-gray-800">Nirmal Eswar Vee</div>
+
+        <!-- Mobile menu button -->
+        <button
+        class="md:hidden menu-button text-gray-700 focus:outline-none"
+        aria-label="Toggle navigation"
+        >
+        <i class="fas fa-bars text-2xl"></i>
+        </button>
+
+        <!-- Nav links (desktop + mobile dropdown) -->
+        <div
+        class="nav-menu hidden md:flex flex-col md:flex-row
+                space-y-2 md:space-y-0 md:space-x-8
+                absolute md:static right-6 top-16 md:top-auto
+                bg-white md:bg-transparent rounded-lg shadow-lg md:shadow-none
+                px-4 py-3 md:p-0"
+        >
+        <a href="#home" class="text-gray-600 hover:text-blue-600">Home</a>
+        <a href="#about" class="text-gray-600 hover:text-blue-600">About</a>
+        <a href="#experience" class="text-gray-600 hover:text-blue-600">Experience</a>
+        <a href="#projects" class="text-gray-600 hover:text-blue-600">Projects</a>
+        <a href="#certifications" class="text-gray-600 hover:text-blue-600">Certifications</a>
         </div>
+    </div>
     </nav>
+
 
     <!-- Hero Section -->
     <section id="home" class="pt-20 pb-12 bg-gradient-to-r from-blue-500 to-blue-700">
@@ -148,10 +163,22 @@
     <section id="projects" class="py-20 bg-white">
         <div class="container mx-auto px-6">
             <h2 class="text-3xl font-bold text-center mb-12">Featured Projects</h2>
+            <div class="flex flex-wrap justify-center gap-3 mb-10">
+                <button data-filter="all" onclick="filterProjects('all')" class="filter-btn px-4 py-2 bg-blue-600 text-white rounded-full hover:bg-blue-700">All</button>
+                <button data-filter="ml" onclick="filterProjects('ml')" class="filter-btn px-4 py-2 bg-gray-200 text-gray-700 rounded-full hover:bg-gray-300">Machine Learning</button>
+                <button data-filter="cv" onclick="filterProjects('cv')" class="filter-btn px-4 py-2 bg-gray-200 text-gray-700 rounded-full hover:bg-gray-300">Computer Vision</button>
+                <button data-filter="rl" onclick="filterProjects('rl')" class="filter-btn px-4 py-2 bg-gray-200 text-gray-700 rounded-full hover:bg-gray-300">Reinforcement Learning</button>
+                <button data-filter="nlp" onclick="filterProjects('nlp')" class="filter-btn px-4 py-2 bg-gray-200 text-gray-700 rounded-full hover:bg-gray-300">NLP</button>
+                <button data-filter="nhs" onclick="filterProjects('nhs')" class="filter-btn px-4 py-2 bg-gray-200 text-gray-700 rounded-full hover:bg-gray-300">NHS & Healthcare</button>
+                <button data-filter="automation" onclick="filterProjects('automation')" class="filter-btn px-4 py-2 bg-gray-200 text-gray-700 rounded-full hover:bg-gray-300">Automation</button>
+                <button data-filter="web" onclick="filterProjects('web')" class="filter-btn px-4 py-2 bg-gray-200 text-gray-700 rounded-full hover:bg-gray-300">Web</button>
+            </div>
+
+
             <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
 
                 <!-- Gradient Boosting Attendance Model -->
-                <div class="bg-gray-50 rounded-lg p-6 shadow-lg hover:shadow-xl transition-shadow">
+                <div class="project-card bg-gray-50 rounded-lg p-6 shadow-lg" data-category="ml nhs">
                     <h3 class="text-xl font-bold mb-4">Gradient Boosting Attendance Model (NHS)</h3>
                     <p class="text-gray-600 mb-4">
                         Built a gradient boosting model to predict whether chemotherapy patients would attend their next appointment,
@@ -165,7 +192,7 @@
                 </div>
 
                 <!-- Computer Vision Watermarking System -->
-                <div class="bg-gray-50 rounded-lg p-6 shadow-lg hover:shadow-xl transition-shadow">
+                <div class="project-card bg-gray-50 rounded-lg p-6 shadow-lg" data-category="cv ml">
                     <h3 class="text-xl font-bold mb-4">Computer Vision Watermarking System</h3>
                     <p class="text-gray-600 mb-4">
                         Implemented an image-to-image steganography pipeline using SIFT keypoints, LSB embedding and tamper detection,
@@ -185,7 +212,7 @@
                 </div>
 
                 <!-- Reinforcement Learning Cliff-Walk Agent -->
-                <div class="bg-gray-50 rounded-lg p-6 shadow-lg hover:shadow-xl transition-shadow">
+                <div class="project-card bg-gray-50 rounded-lg p-6 shadow-lg" data-category="rl ml">
                     <h3 class="text-xl font-bold mb-4">Reinforcement Learning Cliff-Walk Agent</h3>
                     <p class="text-gray-600 mb-4">
                         Developed a SARSA agent with decaying ε-greedy exploration to learn safe, high-reward paths
@@ -205,7 +232,7 @@
                 </div>
 
                 <!-- NLP Document Retrieval System -->
-                <div class="bg-gray-50 rounded-lg p-6 shadow-lg hover:shadow-xl transition-shadow">
+                <div class="project-card bg-gray-50 rounded-lg p-6 shadow-lg" data-category="nlp ml">
                     <h3 class="text-xl font-bold mb-4">NLP Document Retrieval System</h3>
                     <p class="text-gray-600 mb-4">
                         Built a vector space model search engine using sparse TF–IDF representations and cosine similarity, with support
@@ -225,7 +252,7 @@
                 </div>
 
                 <!-- AI Chatbot Platform -->
-                <div class="bg-gray-50 rounded-lg p-6 shadow-lg hover:shadow-xl transition-shadow">
+                <div class="project-card bg-gray-50 rounded-lg p-6 shadow-lg" data-category="automation nlp ml">
                     <h3 class="text-xl font-bold mb-4">AI Chatbot Platform</h3>
                     <p class="text-gray-600 mb-4">
                         Created OpenAI-powered chatbots with retrieval-augmented generation (RAG), embeddings and custom knowledge bases,
@@ -239,7 +266,7 @@
                 </div>
 
                 <!-- Governance Workflow Automation -->
-                <div class="bg-gray-50 rounded-lg p-6 shadow-lg hover:shadow-xl transition-shadow">
+                <div class="project-card bg-gray-50 rounded-lg p-6 shadow-lg" data-category="automation nhs">
                     <h3 class="text-xl font-bold mb-4">Governance Workflow Automation</h3>
                     <p class="text-gray-600 mb-4">
                         Designed Cognito Forms workflows to automate multi-department research approvals, capturing governance logic,
@@ -253,7 +280,7 @@
                 </div>
 
                 <!-- RNN Memory Research -->
-                <div class="bg-gray-50 rounded-lg p-6 shadow-lg hover:shadow-xl transition-shadow">
+                <div class="project-card bg-gray-50 rounded-lg p-6 shadow-lg" data-category="ml research">
                     <h3 class="text-xl font-bold mb-4">RNN Memory Research (Dissertation)</h3>
                     <p class="text-gray-600 mb-4">
                         Investigated practical limits of sequence memorisation in recurrent neural networks, exploring invertible nonlinearities
@@ -273,7 +300,7 @@
                 </div>
 
                 <!-- Trains of Sheffield -->
-                <div class="bg-gray-50 rounded-lg p-6 shadow-lg hover:shadow-xl transition-shadow">
+                <div class="project-card bg-gray-50 rounded-lg p-6 shadow-lg" data-category="web">
                     <h3 class="text-xl font-bold mb-4">Trains of Sheffield E-Commerce</h3>
                     <p class="text-gray-600 mb-4">
                         Built a full-featured e-commerce platform for model railway products with order management and database-backed
@@ -292,7 +319,7 @@
                 </div>
 
                 <!-- Naive POS Tagger -->
-                <div class="bg-gray-50 rounded-lg p-6 shadow-lg hover:shadow-xl transition-shadow">
+                <div class="project-card bg-gray-50 rounded-lg p-6 shadow-lg" data-category="nlp ml">
                     <h3 class="text-xl font-bold mb-4">Naive POS Tagger</h3>
                     <p class="text-gray-600 mb-4">
                         Implemented a part-of-speech tagger using frequency-based statistics and heuristics for unknown words, evaluated
@@ -310,7 +337,7 @@
                 </div>
 
                 <!-- Portfolio Website -->
-                <div class="bg-gray-50 rounded-lg p-6 shadow-lg hover:shadow-xl transition-shadow">
+                <div class="project-card bg-gray-50 rounded-lg p-6 shadow-lg" data-category="web">
                     <h3 class="text-xl font-bold mb-4">Portfolio Website</h3>
                     <p class="text-gray-600 mb-4">
                         Designed and developed this responsive portfolio using HTML, Tailwind CSS and basic JavaScript to showcase
@@ -407,10 +434,9 @@
         <i class="fas fa-comment-dots text-xl"></i>
     </button>
     <script src="script.js"></script>
-
-    </body>
-    <footer class="bg-gray-800 text-white py-6">
+        <footer class="bg-gray-800 text-white py-6">
         <div class="container mx-auto px-6 text-center">
             <p>&copy; 2025 Nirmal Eswar Vee | All rights reserved</p>
         </div>
     </footer>
+</body>
